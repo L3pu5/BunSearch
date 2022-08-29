@@ -5,6 +5,7 @@ A way for buns to search
 Usage:
 
 python3 BunSearch.py <ipaddress>
+  
 python3 BunSearch.py hash <hash>
 ------
 
