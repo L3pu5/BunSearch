@@ -97,7 +97,27 @@ urlScanButton.configure(bg=DEFAULT_COLOUR_DEFAULT_WIDGET[colourTheme])
 urlScanButton.configure(command=lambda: open_in_browser("https://urlscan.io"))
 IPButtons.append(urlScanButton)
 
+trendMicroSiteSafetyCenter = Button(IPButtonFrame, text="Trend Micro")
+trendMicroSiteSafetyCenter.configure(bg=DEFAULT_COLOUR_DEFAULT_WIDGET[colourTheme])
+trendMicroSiteSafetyCenter.configure(command=lambda: open_in_browser("https://global.sitesafety.trendmicro.com/"))
+IPButtons.append(trendMicroSiteSafetyCenter)
+
+PaloAltoButton = Button(IPButtonFrame, text="Palo Alto")
+PaloAltoButton.configure(bg=DEFAULT_COLOUR_DEFAULT_WIDGET[colourTheme])
+PaloAltoButton.configure(command=lambda: open_in_browser("https://urlfiltering.paloaltonetworks.com/"))
+IPButtons.append(PaloAltoButton)
+
 #DIRECTED
+NortonButton = Button(IPButtonFrame, text="Norton")
+NortonButton.configure(bg=DEFAULT_COLOUR_DEFAULT_WIDGET[colourTheme])
+NortonButton.configure(command=lambda: open_in_browser("https://safeweb.norton.com/report/show?url=" + userInput.get()))
+IPButtons.append(NortonButton)
+
+GoogleSafeBrowsing = Button(IPButtonFrame, text="Google")
+GoogleSafeBrowsing.configure(bg=DEFAULT_COLOUR_ALTERNATE_WIDGET[colourTheme])
+GoogleSafeBrowsing.configure(command=lambda: open_in_browser("https://transparencyreport.google.com/safe-browsing/search?url=" + userInput.get()))
+IPButtons.append(GoogleSafeBrowsing)
+
 ciscoTalosButton = Button(IPButtonFrame, text="Cisco Talos")
 ciscoTalosButton.configure(bg=DEFAULT_COLOUR_ALTERNATE_WIDGET[colourTheme])
 ciscoTalosButton.configure(command=lambda: open_in_browser("https://www.talosintelligence.com/reputation_center/lookup?search=" + userInput.get()))
@@ -113,7 +133,7 @@ abuseIPButton.configure(bg=DEFAULT_COLOUR_ALTERNATE_WIDGET[colourTheme])
 abuseIPButton.configure(command=lambda: open_in_browser("https://www.abuseipdb.com/check/" + userInput.get()))
 IPButtons.append(abuseIPButton)
 
-kasperskyButton = Button(IPButtonFrame, text="Kaspersky OpenTip")
+kasperskyButton = Button(IPButtonFrame, text="Kaspersky")
 kasperskyButton.configure(bg=DEFAULT_COLOUR_ALTERNATE_WIDGET[colourTheme])
 kasperskyButton.configure(command=lambda: open_in_browser("https://opentip.kaspersky.com/" + userInput.get()))
 IPButtons.append(kasperskyButton)
@@ -128,6 +148,12 @@ teamCYMRUButton = Button(HashButtonFrame, text="Team CYMRU")
 teamCYMRUButton.configure(bg=DEFAULT_COLOUR_DEFAULT_WIDGET[colourTheme])
 teamCYMRUButton.configure(command=lambda: open_in_browser("https://hash.cymru.com/"))
 HashButtons.append(teamCYMRUButton)
+
+fileScanIO = Button(HashButtonFrame, text="filescan.io")
+fileScanIO.configure(bg=DEFAULT_COLOUR_DEFAULT_WIDGET[colourTheme])
+fileScanIO.configure(command=lambda: open_in_browser("https://www.filescan.io/scan"))
+HashButtons.append(fileScanIO)
+
 
 talosHashButton = Button(HashButtonFrame, text="Cisco Talos")
 talosHashButton.configure(bg=DEFAULT_COLOUR_DEFAULT_WIDGET[colourTheme])
@@ -149,10 +175,15 @@ virusTotalHashButton.configure(bg=DEFAULT_COLOUR_ALTERNATE_WIDGET[colourTheme])
 virusTotalHashButton.configure(command=lambda: open_in_browser("https://www.virustotal.com/gui/search/" + userInput.get()))
 HashButtons.append(virusTotalHashButton)
 
-alientVaultHashButton = Button(IPButtonFrame, text="OTX AleinVault")
+alientVaultHashButton = Button(HashButtonFrame, text="OTX AleinVault")
 alientVaultHashButton.configure(bg=DEFAULT_COLOUR_ALTERNATE_WIDGET[colourTheme])
 alientVaultHashButton.configure(command=lambda: open_in_browser("https://otx.alienvault.com/indicator/file/" + userInput.get()))
 HashButtons.append(alientVaultHashButton)
+
+kasperskyHashButton = Button(HashButtonFrame, text="Kaspersky")
+kasperskyHashButton.configure(bg=DEFAULT_COLOUR_ALTERNATE_WIDGET[colourTheme])
+kasperskyHashButton.configure(command=lambda: open_in_browser("https://opentip.kaspersky.com/" + userInput.get()))
+HashButtons.append(kasperskyHashButton)
 
 #https://otx.alienvault.com/browse/global/indicators?include_inactive=0&sort=-modified&page=1&limit=10&q=
 #ciscoTalosButton.place(x=10, y=10, width=DEFAULT_BUTTON_WIDTH, height=DEFAULT_BUTTON_HEIGHT)
