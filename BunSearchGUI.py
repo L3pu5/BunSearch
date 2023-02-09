@@ -123,6 +123,12 @@ ciscoTalosButton.configure(bg=DEFAULT_COLOUR_ALTERNATE_WIDGET[colourTheme])
 ciscoTalosButton.configure(command=lambda: open_in_browser("https://www.talosintelligence.com/reputation_center/lookup?search=" + userInput.get()))
 IPButtons.append(ciscoTalosButton)
 
+symantecButton = Button(IPButtonFrame, text="Symantec")
+symantecButton.configure(bg=DEFAULT_COLOUR_ALTERNATE_WIDGET[colourTheme])
+symantecButton.configure(command=lambda: open_in_browser("https://sitereview.symantec.com/#/lookup-result/" + userInput.get()))
+IPButtons.append(symantecButton)
+
+#https://sitereview.symantec.com/#/lookup-result/13.135.11.105
 virusTotalButton = Button(IPButtonFrame, text="Virus Total")
 virusTotalButton.configure(bg=DEFAULT_COLOUR_ALTERNATE_WIDGET[colourTheme])
 virusTotalButton.configure(command=lambda: open_in_browser("https://www.virustotal.com/gui/search/" + userInput.get()))
